@@ -66,12 +66,36 @@ li {
 li:hover { background: rgba(255, 204, 0, 0.15); transform: translateX(5px); }
 li.active { border-left-color: var(--amarelo); background: rgba(255, 204, 0, 0.2); font-weight: bold; }
 
+.music-info {
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    border-left: 4px solid var(--amarelo);
+}
+
+.music-info h2 {
+    color: var(--amarelo);
+    margin: 0 0 10px 0;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.music-info p {
+    font-size: 1.1rem; /* Aumentei um pouco para facilitar a leitura */
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin: 0;
+}
+
 /* Responsividade para Celulares */
 @media (max-width: 768px) {
     .jukebox-grid { grid-template-columns: 1fr; }
     .playlist-section { max-height: none; }
     h1 { font-size: 1.4rem; }
     .logo { width: 70px; }
+    .music-info h2 { font-size: 1.3rem; }
+    .music-info p { font-size: 1rem; }
 }
 
 /* Scrollbar */
