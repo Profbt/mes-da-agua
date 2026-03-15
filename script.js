@@ -6,19 +6,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     playlistItems.forEach(item => {
         item.addEventListener('click', () => {
-            // Remove classe ativa de todos
+            // Remove destaque do anterior
             playlistItems.forEach(i => i.classList.remove('active'));
             
-            // Adiciona ao clicado
+            // Ativa o novo item
             item.classList.add('active');
 
-            // Atualiza o Vídeo
+            // Muda o vídeo (com autoplay)
             const videoId = item.getAttribute('data-video');
             player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
 
-            // Atualiza Textos
+            // Atualiza textos
             title.innerText = item.getAttribute('data-title');
             desc.innerText = item.getAttribute('data-desc');
+
+            // Scroll suave para o topo no mobile ao clicar em uma música
+            if (window.innerWidth < 768) {
+                window.scrollTo({ top: 150, behavior: 'smooth' });
+            }
         });
     });
 });
