@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jukebox Mês da Água - Colégio Vicente Rijo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <img src="img/logo_escola.png" alt="Logo Vicente Rijo" class="logo">
+            <h1>Jukebox: Mês da Água</h1>
+            <p>Conscientização e Melodia para um Futuro Sustentável</p>
+        </header>
+
+        <main class="jukebox-grid">
+            <section class="player-section">
+                <div class="video-container">
+                    <iframe id="main-player" src="https://www.youtube.com/embed/Q8f1e1wy8jM" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="music-info">
+                    <h2 id="current-title">Sons de Natureza</h2>
+                    <p id="current-desc">Água (rio, Cachoeira) e pássaros. [cite: 2]</p>
+                </div>
+            </section>
+
+            <section class="playlist-section">
+                <ul id="playlist">
+                    <li class="active" data-video="Q8f1e1wy8jM" data-title="Sons de Natureza" data-desc="Água (rio, Cachoeira) e pássaros. [cite: 2]">01. Sons de Natureza</li>
+                    <li data-video="8ERBwtuaYmY" data-title="Sobradinho" data-desc="Um alerta clássico sobre o impacto humano nos rios e o avanço das águas. [cite: 4]">02. Sobradinho - Sá & Guarabyra</li>
+                    <li data-video="zly3EwyBBI0" data-title="Asa Branca" data-desc="Fala sobre a seca e a importância da água no Nordeste. [cite: 6]">03. Asa Branca - Luiz Gonzaga</li>
+                    <li data-video="Gbv4pB3YmL4" data-title="Águas de Março" data-desc="Ícone da MPB que utiliza a metáfora das chuvas para falar de renovação e ciclos da natureza. [cite: 8, 9]">04. Águas de Março - Elis & Tom</li>
+                    <li data-video="6jQv9tvl0Gg" data-title="Oh Chuva" data-desc="Pedido para que a chuva chegue de forma suave e abençoada. [cite: 12]">05. Oh Chuva - Planta & Raiz</li>
+                    <li data-video="MCJvZ0C57FM" data-title="Aquarela" data-desc="Ótima para trabalhar imaginação e natureza. [cite: 14]">06. Aquarela - Toquinho</li>
+                    <li data-video="0yJqmlV4r9A" data-title="Lobisomem Juvenil" data-desc="Lembrete de como a falta de recursos básicos impacta a vida nas cidades. [cite: 17, 18]">07. Eu era um Lobisomem - Legião</li>
+                    <li data-video="Ubol9NyLWZc" data-title="Chove Chuva" data-desc="Lembra que a água também é cenário de alegria e sentimentos humanos. [cite: 20, 21]">08. Chove Chuva - Jorge Ben Jor</li>
+                    <li data-video="oPwnAq2xMUg" data-title="Planeta Água" data-desc="O hino indispensável. Descreve todo o ciclo da água, da nuvem ao chão. [cite: 26]">09. Planeta Água - Guilherme Arantes</li>
+                    <li data-video="WOQ6gqmuoM8" data-title="Súplica Cearense" data-desc="Prece comovente sobre a relação profunda do sertanejo com a terra em busca de sobrevivência. [cite: 28, 29]">10. Súplica Cearense - Gordurinha</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

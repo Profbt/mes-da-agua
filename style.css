@@ -1,0 +1,71 @@
+:root {
+    --azul-escuro: #002855;
+    --amarelo: #ffcc00;
+    --branco: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    overflow-x: hidden;
+}
+
+/* Animação de Ondas */
+.ocean { 
+    height: 5%; width: 100%; position: absolute; bottom: 0; left: 0; background: #01579b;
+}
+
+.wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+    position: absolute; top: -198px; width: 6400px; height: 198px; animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite; transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) { top: -175px; animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite; opacity: 1; }
+
+@keyframes wave { 0% { margin-left: 0; } 100% { margin-left: -1600px; } }
+@keyframes swell { 0%, 100% { transform: translate3d(0,-25px,0); } 50% { transform: translate3d(0,5px,0); } }
+
+/* Layout */
+.container {
+    position: relative; z-index: 2; max-width: 1100px; margin: 0 auto; padding: 20px;
+}
+
+header { text-align: center; margin-bottom: 30px; }
+
+.logo { width: 120px; border-radius: 10px; border: 3px solid var(--amarelo); margin-bottom: 10px; }
+
+h1 { color: var(--amarelo); text-transform: uppercase; letter-spacing: 2px; }
+
+.jukebox-grid {
+    display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px; background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2);
+}
+
+.video-container {
+    position: relative; padding-bottom: 56.25%; height: 0; border-radius: 15px; overflow: hidden; border: 4px solid var(--amarelo);
+}
+
+.video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.music-info { margin-top: 20px; }
+.music-info h2 { color: var(--amarelo); }
+
+/* Playlist */
+.playlist-section { max-height: 500px; overflow-y: auto; }
+
+ul { list-style: none; padding: 0; }
+
+li {
+    padding: 15px; margin-bottom: 10px; background: rgba(0,0,0,0.3); border-radius: 8px; cursor: pointer;
+    transition: 0.3s; border-left: 5px solid transparent;
+}
+
+li:hover { background: rgba(255, 204, 0, 0.2); transform: translateX(5px); }
+
+li.active { border-left: 5px solid var(--amarelo); background: rgba(255, 204, 0, 0.3); font-weight: bold; }
+
+/* Scrollbar Customizada */
+.playlist-section::-webkit-scrollbar { width: 8px; }
+.playlist-section::-webkit-scrollbar-thumb { background: var(--amarelo); border-radius: 10px; }
